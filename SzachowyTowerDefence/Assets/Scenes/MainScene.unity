@@ -149,7 +149,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -420,7 +420,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Carpet
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6239646875461457602, guid: 3d1382ca3eff5734eadab3ab97496dd1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3d1382ca3eff5734eadab3ab97496dd1, type: 3}
 --- !u!1001 &4406067693593454484
 PrefabInstance:
@@ -489,5 +490,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Table
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4406067693831459776, guid: 05bcdad8cab7ad34487de810a12007b1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 05bcdad8cab7ad34487de810a12007b1, type: 3}
