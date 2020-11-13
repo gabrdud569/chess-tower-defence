@@ -1066,6 +1066,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardPointF4
       objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1152,6 +1157,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoardPointD7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
@@ -1240,6 +1250,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardPointH3
       objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1326,6 +1341,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoardPointA8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
@@ -1414,6 +1434,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardPointD6
       objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1500,6 +1525,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoardPointD3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
@@ -1588,6 +1618,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardPointB3
       objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1674,6 +1709,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoardPointC6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
@@ -1762,6 +1802,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardPointG6
       objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1848,6 +1893,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoardPointA6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
@@ -1936,6 +1986,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardPointH6
       objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2022,6 +2077,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoardPointB8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
@@ -2110,6 +2170,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardPointG8
       objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2196,6 +2261,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoardPointB5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
@@ -2284,6 +2354,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardPointH8
       objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2370,6 +2445,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoardPointD2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
@@ -2458,6 +2538,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardPointA3
       objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2544,6 +2629,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoardPointG3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
@@ -2632,6 +2722,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardPointF3
       objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2718,6 +2813,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoardPointA2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
@@ -2806,6 +2906,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardPointD1
       objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2892,6 +2997,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoardPointC5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
@@ -2980,6 +3090,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardPointC2
       objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3066,6 +3181,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoardPointH5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
@@ -3154,6 +3274,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardPointA1
       objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3239,6 +3364,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoardPointB7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
@@ -3327,6 +3457,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardPointC7
       objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3413,6 +3548,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoardPointE4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
@@ -3501,6 +3641,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardPointF1
       objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3587,6 +3732,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoardPointE1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
@@ -3675,6 +3825,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardPointB6
       objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3761,6 +3916,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoardPointG5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
@@ -3849,6 +4009,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardPointE8
       objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3935,6 +4100,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoardPointG1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
@@ -4023,6 +4193,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardPointH7
       objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4109,6 +4284,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoardPointH1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
@@ -4197,6 +4377,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardPointE5
       objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4283,6 +4468,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoardPointD5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
@@ -4371,6 +4561,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardPointC1
       objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4457,6 +4652,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoardPointB1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
@@ -4545,6 +4745,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardPointG4
       objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4631,6 +4836,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoardPointG2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
@@ -4719,6 +4929,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardPointD4
       objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4805,6 +5020,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoardPointB4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
@@ -4893,6 +5113,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardPointC4
       objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4979,6 +5204,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoardPointE3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
@@ -5067,6 +5297,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardPointF2
       objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5153,6 +5388,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoardPointE2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
@@ -5241,6 +5481,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardPointE7
       objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5327,6 +5572,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoardPointA5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
@@ -5415,6 +5665,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardPointF8
       objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5501,6 +5756,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoardPointB2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
@@ -5589,6 +5849,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardPointA7
       objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5675,6 +5940,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoardPointF5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
@@ -5763,6 +6033,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardPointE6
       objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5849,6 +6124,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoardPointH2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
@@ -5937,6 +6217,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardPointF6
       objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6023,6 +6308,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoardPointH4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
@@ -6111,6 +6401,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardPointF7
       objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6197,6 +6492,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoardPointC8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
@@ -6285,6 +6585,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardPointD8
       objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6371,6 +6676,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoardPointG7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
@@ -6459,6 +6769,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardPointC3
       objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6545,6 +6860,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoardPointA4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388166118826342201, guid: f2a67b7191a639249bf1b9f768d38779,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8166888581840400407, guid: f2a67b7191a639249bf1b9f768d38779,
         type: 3}
