@@ -5,15 +5,17 @@ using UnityEngine;
 public class BoardController : MonoBehaviour
 {
     [SerializeField] private List<BoardPointController> boardPointControllers;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private PathConfig pathConfig;
 
-    // Update is called once per frame
-    void Update()
+    public List<PathElement> GetPath()
     {
-        
+        List<PathElement> path = new List<PathElement>();
+
+        foreach (string pathElement in pathConfig.path)
+        {
+            path.Add(boardPointControllers.Find(x => x.name.Contains(pathElement)));
+        }
+
+        return path;
     }
 }

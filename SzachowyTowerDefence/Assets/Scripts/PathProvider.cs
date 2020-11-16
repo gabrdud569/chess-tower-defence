@@ -4,5 +4,9 @@ using UnityEngine;
 
 public class PathProvider : MonoBehaviour
 {
-    [SerializeField] public List<PathElement> pathElements;
+    [SerializeField] private List<PathElement> startPathElements;
+    [SerializeField] private List<PathElement> endPathElements;
+
+    public List<PathElement> StartPathElements => startPathElements;
+    public List<PathElement> EndPathElements => endPathElements;
 }

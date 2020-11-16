@@ -12,4 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59ea32e83499d77459120f2528d356da, type: 3}
   m_Name: PathConfig 1
   m_EditorClassIdentifier: 
-  path: []
+  path:
+  - A8
+  - B8
+  - B7
+  - B6
+  - B5
+  - B4
+  - B3
+  - B2
+  - C2
+  - D2
+  - E2
+  - F2
+  - G2
+  - H2
+  - H1

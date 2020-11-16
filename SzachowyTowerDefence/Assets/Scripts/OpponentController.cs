@@ -17,7 +17,7 @@ public class OpponentController : MonoBehaviour
     {
         if (isAlive)
         {
-            transform.Translate(Vector3.forward * Time.fixedDeltaTime);
+            transform.Translate(Vector3.forward * Time.fixedDeltaTime * currentSpeed);
         }
     }
 
@@ -35,11 +35,12 @@ public class OpponentController : MonoBehaviour
     public void StartMovement()
     {
         animator.SetBool("Walk", true);
+        animator.speed = currentSpeed;
         MoveToNextPoint(0);
     }
 
     public void OnPointInPathEntered(PathElement pathElement)
-    { 
+    {
         MoveToNextPoint(path.IndexOf(pathElement)+1);
     }
 
@@ -66,7 +67,7 @@ public class OpponentController : MonoBehaviour
     {
         if(currentLife <= 0)
         {
-            animator.SetBool("Dead", true);
+            //animator.SetBool("Dead", true);
             isAlive = false;
             Destroy(this.gameObject);
         }

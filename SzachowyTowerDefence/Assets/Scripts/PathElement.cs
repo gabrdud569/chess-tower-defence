@@ -9,7 +9,7 @@ public class PathElement : MonoBehaviour
         return this.transform;
     }
 
-    private void OnTriggerEnter(Collider other)
+    protected virtual void OnTriggerEnter(Collider other)
     {
         if(other.GetComponent<OpponentController>() != null)
         {
