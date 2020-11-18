@@ -7,23 +7,17 @@ public class BoardController : MonoBehaviour
     [SerializeField] private List<BoardPointController> boardPointControllers;
     [SerializeField] private PathConfig pathConfig;
 
-    //public void Start()
-    //{
-    //    foreach (var item in boardPointControllers)
-    //    {
-    //        item.ChangeState(BoardPointType.Free);
-    //        item.SetVisible(false);
-    //    }
-    //}
-
-    public List<PathElement> GetPath()
+    public void Init()
     {
         foreach (var item in boardPointControllers)
         {
             item.ChangeState(BoardPointType.Free);
-            item.SetVisible(true);
+            item.SetVisible(false);
         }
+    }
 
+    public List<PathElement> GetPath()
+    {
         List<PathElement> path = new List<PathElement>();
 
         foreach (string pathElement in pathConfig.path)

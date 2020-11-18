@@ -11,8 +11,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private BoardController boardController;
 
     private List<PathElement> path;
-
-    void Start()
+    public void Init()
     {
         path = pathProvider.StartPathElements;
         path.AddRange(boardController.GetPath());

@@ -46,9 +46,4 @@ public class BoardPointController : PathElement
             gameObject.transform.GetChild(i).GetComponent<MeshRenderer>().sharedMaterial = material;
         }
     }
-
-    protected override void OnTriggerEnter(Collider other)
-    {
-        base.OnTriggerEnter(other);
-    }
 }
