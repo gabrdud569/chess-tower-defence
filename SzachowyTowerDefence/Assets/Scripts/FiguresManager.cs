@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class FiguresManager : MonoBehaviour
 {
-    [SerializeField] List<FigureController> figures;
+    [SerializeField] private List<FigureController> figures;
+    [SerializeField] private AnimationCurve curve;
 
     private FigureController figureToPlace;
 
@@ -34,7 +35,7 @@ public class FiguresManager : MonoBehaviour
     {
         if (figureToPlace != null)
         {
-            figureToPlace.StartMoveFigure(endPosition, OnFigureOnBoard);
+            figureToPlace.StartMoveFigure(endPosition, OnFigureOnBoard, curve);
             figureToPlace = null;
         }
     }
