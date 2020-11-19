@@ -14,10 +14,17 @@ public class FiguresManager : MonoBehaviour
 
     public void OnClickDetected(string objectName)
     {
-        if (figures.Exists(x => x.name == objectName))
+        Material standardMaterial = Resources.Load<Material>("Light");
+        figures.ForEach((x) =>
         {
-            Material standardMaterial = Resources.Load<Material>("Light");
-            figures.ForEach((x) => x.GetComponent<MeshRenderer>().sharedMaterial = standardMaterial);
+            if (!x.IsMoving)
+            {
+                x.GetComponent<MeshRenderer>().sharedMaterial = standardMaterial;
+            };
+        });
+
+        if (figures.Exists(x => x.name == objectName) && !figures.Exists(x => x.IsMoving))
+        {
             figureToPlace = figures.Find(x => x.name == objectName);
             figureToPlace.GetComponent<MeshRenderer>().sharedMaterial = Resources.Load<Material>("HightlightLight");
         }
@@ -25,10 +32,16 @@ public class FiguresManager : MonoBehaviour
 
     public void OnPointOnBoardClicked(Vector3 endPosition)
     {
-        if(figureToPlace != null)
+        if (figureToPlace != null)
         {
-            figureToPlace.StartMoveFigure(endPosition);
+            figureToPlace.StartMoveFigure(endPosition, OnFigureOnBoard);
             figureToPlace = null;
         }
+    }
+
+    private void OnFigureOnBoard(FigureController controller)
+    {
+        Material standardMaterial = Resources.Load<Material>("Light");
+        controller.GetComponent<MeshRenderer>().sharedMaterial = standardMaterial;
     }
 }
