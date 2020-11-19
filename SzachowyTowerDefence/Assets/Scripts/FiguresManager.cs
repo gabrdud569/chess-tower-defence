@@ -1,12 +1,20 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class FiguresManager : MonoBehaviour
 {
     [SerializeField] private List<FigureController> figures;
     [SerializeField] private AnimationCurve curve;
-
+    
     private FigureController figureToPlace;
+    private List<string> figuresNames;
+
+    public void Init()
+    {
+        figuresNames = new List<string>();
+        figures.ForEach(x => figuresNames.Add(x.name));
+    }
 
     public FigureController GetFigureToPlace()
     {
@@ -31,18 +39,33 @@ public class FiguresManager : MonoBehaviour
         }
     }
 
-    public void OnPointOnBoardClicked(Vector3 endPosition)
+    public void OnPointOnBoardClicked(Vector3 endPosition, BoardPointController point, Action<BoardPointController> onSuccesFigureMoving)
     {
         if (figureToPlace != null)
         {
-            figureToPlace.StartMoveFigure(endPosition, OnFigureOnBoard, curve);
+            if(figureToPlace.StartMoveFigure(endPosition, OnFigureOnBoard, curve))
+            {
+                onSuccesFigureMoving(point);
+            }
+
             figureToPlace = null;
         }
     }
 
-    private void OnFigureOnBoard(FigureController controller)
+    private void OnFigureOnBoard(FigureController controller, Vector3 startPosition)
     {
-        Material standardMaterial = Resources.Load<Material>("Light");
-        controller.GetComponent<MeshRenderer>().sharedMaterial = standardMaterial;
+        if (figures.Contains(controller))
+        {
+            Material standardMaterial = Resources.Load<Material>("Light");
+            controller.GetComponent<MeshRenderer>().sharedMaterial = standardMaterial;
+
+            string prefabName = figuresNames.Find(x => controller.name.Contains(x));
+            GameObject newFigure = Instantiate(Resources.Load<GameObject>(prefabName));
+            newFigure.name = prefabName + figures.Count.ToString();
+            newFigure.transform.position = startPosition;
+            newFigure.transform.SetParent(this.gameObject.transform);
+
+            figures.Add(newFigure.GetComponent<FigureController>());
+        }
     }
 }

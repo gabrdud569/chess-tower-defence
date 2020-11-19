@@ -13,10 +13,10 @@ public class BoardController : MonoBehaviour
     {
         this.figuresManager = figuresManager;
 
-        foreach (var item in boardPointControllers)
+        foreach (var point in boardPointControllers)
         {
-            item.ChangeState(BoardPointType.Free);
-            item.SetVisible(false);
+            point.ChangeState(BoardPointType.Free);
+            point.SetVisible(false);
         }
     }
 
@@ -41,7 +41,12 @@ public class BoardController : MonoBehaviour
 
         if(point != null && point.BoardPointType != BoardPointType.Occupied && point.BoardPointType != BoardPointType.Path)
         {
-            figuresManager.OnPointOnBoardClicked(point.transform.position);
+            figuresManager.OnPointOnBoardClicked(point.transform.position, point, OnPointStartOccupied);
         }
+    }
+
+    public void OnPointStartOccupied(BoardPointController point)
+    {
+        point.ChangeState(BoardPointType.Occupied);
     }
 }

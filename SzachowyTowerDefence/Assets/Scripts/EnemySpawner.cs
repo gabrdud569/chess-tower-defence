@@ -21,16 +21,17 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator SpawnEnemy()
     {
-        for (int j = 0; j < 1; j++)
+        for (int j = 0; j < 100; j++)
         {
             int randomValue = Random.Range(0, 3);
-            int i = 1;
+            int i = 100;
 
             while (i-- > 0)
             {
                 yield return new WaitForSeconds(0.1f);
                 GameObject enemyPrefab = Instantiate(enemyPrefabs[randomValue]);
                 enemyPrefab.transform.position = this.transform.position;
+                enemyPrefab.transform.SetParent(this.gameObject.transform);
                 enemyPrefab.GetComponent<OpponentController>().Initialize(path, opponentConfig[randomValue]);
             }
         }

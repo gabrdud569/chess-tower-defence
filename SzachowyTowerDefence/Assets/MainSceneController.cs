@@ -11,6 +11,7 @@ public class MainSceneController : MonoBehaviour
 
     private void Start()
     {
+        figuresManager.Init();
         boardController.Init(figuresManager);
         enemySpawner.Init();
         clickDetectController.Init(boardController, figuresManager);
