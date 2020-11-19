@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!64 &7551815113754902286
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6575222255520958696}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 0d4dc18442ed9d14698239a5a964f27f, type: 3}
 --- !u!1 &9038175642865751386
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,6 +23,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1347680871382873764}
+  - component: {fileID: 3702437136260658944}
   m_Layer: 0
   m_Name: ChessFigures
   m_TagString: Untagged
@@ -38,6 +53,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3702437136260658944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9038175642865751386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 469908c3f1a8c384a8f8e2406eff1193, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  figures: []
 --- !u!1001 &776680155267058710
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -410,6 +438,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 632fde4268673ae428ab41f4ef4e573c, type: 3}
+--- !u!1 &6575222255520958696 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1810274083847610, guid: 632fde4268673ae428ab41f4ef4e573c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6573443059959690578}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6572831172617830142 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4200693306526636, guid: 632fde4268673ae428ab41f4ef4e573c,

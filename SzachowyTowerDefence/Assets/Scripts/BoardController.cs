@@ -7,8 +7,12 @@ public class BoardController : MonoBehaviour
     [SerializeField] private List<BoardPointController> boardPointControllers;
     [SerializeField] private PathConfig pathConfig;
 
-    public void Init()
+    private FiguresManager figuresManager;
+
+    public void Init(FiguresManager figuresManager)
     {
+        this.figuresManager = figuresManager;
+
         foreach (var item in boardPointControllers)
         {
             item.ChangeState(BoardPointType.Free);
@@ -29,5 +33,15 @@ public class BoardController : MonoBehaviour
         }
 
         return path;
+    }
+
+    public void OnClickDetected(string objectName)
+    {
+        BoardPointController point = boardPointControllers.Find(x => x.name == objectName);
+
+        if(point != null && point.BoardPointType != BoardPointType.Occupied && point.BoardPointType != BoardPointType.Path)
+        {
+            figuresManager.OnPointOnBoardClicked(point.transform.position);
+        }
     }
 }

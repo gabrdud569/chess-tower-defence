@@ -1,26 +1,34 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class FiguresManager : MonoBehaviour
 {
-    public static FiguresManager instance;
+    [SerializeField] List<FigureController> figures;
 
-    void Awake ()
-    {
-        if (instance !=null)
-        { 
-            Debug.LogError("More than one FiguresManager!")
-        }
-        instance = this;
-    }
+    private FigureController figureToPlace;
 
-    private GameObject figureToPlace;
-
-    public GameObject GetFigureToPlace()
+    public FigureController GetFigureToPlace()
     {
         return figureToPlace;
     }
 
+    public void OnClickDetected(string objectName)
+    {
+        if (figures.Exists(x => x.name == objectName))
+        {
+            Material standardMaterial = Resources.Load<Material>("Light");
+            figures.ForEach((x) => x.GetComponent<MeshRenderer>().sharedMaterial = standardMaterial);
+            figureToPlace = figures.Find(x => x.name == objectName);
+            figureToPlace.GetComponent<MeshRenderer>().sharedMaterial = Resources.Load<Material>("HightlightLight");
+        }
+    }
 
+    public void OnPointOnBoardClicked(Vector3 endPosition)
+    {
+        if(figureToPlace != null)
+        {
+            figureToPlace.StartMoveFigure(endPosition);
+            figureToPlace = null;
+        }
+    }
 }
