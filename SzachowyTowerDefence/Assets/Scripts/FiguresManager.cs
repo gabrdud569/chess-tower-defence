@@ -6,7 +6,9 @@ public class FiguresManager : MonoBehaviour
 {
     [SerializeField] private List<FigureController> figures;
     [SerializeField] private AnimationCurve curve;
-    
+
+    public event Action<FigureController, int> OnFigureOnBoardAction = delegate { };
+
     private FigureController figureToPlace;
     private List<string> figuresNames;
 
@@ -52,20 +54,26 @@ public class FiguresManager : MonoBehaviour
         }
     }
 
-    private void OnFigureOnBoard(FigureController controller, Vector3 startPosition)
+    private void OnFigureOnBoard(FigureController controller, Vector3 startPosition, int figureRange)
     {
         if (figures.Contains(controller))
         {
-            Material standardMaterial = Resources.Load<Material>("Light");
-            controller.GetComponent<MeshRenderer>().sharedMaterial = standardMaterial;
-
-            string prefabName = figuresNames.Find(x => controller.name.Contains(x));
-            GameObject newFigure = Instantiate(Resources.Load<GameObject>(prefabName));
-            newFigure.name = prefabName + figures.Count.ToString();
-            newFigure.transform.position = startPosition;
-            newFigure.transform.SetParent(this.gameObject.transform);
-
-            figures.Add(newFigure.GetComponent<FigureController>());
+            OnFigureOnBoardAction(controller, figureRange);
+            SpawnNewFigure(controller, startPosition);
         }
+    }
+
+    private void SpawnNewFigure(FigureController controller, Vector3 startPosition)
+    {
+        Material standardMaterial = Resources.Load<Material>("Light");
+        controller.GetComponent<MeshRenderer>().sharedMaterial = standardMaterial;
+
+        string prefabName = figuresNames.Find(x => controller.name.Contains(x));
+        GameObject newFigure = Instantiate(Resources.Load<GameObject>(prefabName));
+        newFigure.name = prefabName + figures.Count.ToString();
+        newFigure.transform.position = startPosition;
+        newFigure.transform.SetParent(this.gameObject.transform);
+
+        figures.Add(newFigure.GetComponent<FigureController>());
     }
 }

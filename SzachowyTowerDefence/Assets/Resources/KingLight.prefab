@@ -107,3 +107,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5db65a575ad81d44b8ca4acbb94d2525, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shotingRange: 1
+  bulletsPerShot: 5

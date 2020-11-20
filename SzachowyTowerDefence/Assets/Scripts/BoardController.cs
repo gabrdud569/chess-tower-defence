@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,6 +13,7 @@ public class BoardController : MonoBehaviour
     public void Init(FiguresManager figuresManager)
     {
         this.figuresManager = figuresManager;
+        figuresManager.OnFigureOnBoardAction += OnFigureEnteredOnBoard;
 
         foreach (var point in boardPointControllers)
         {
@@ -48,5 +50,40 @@ public class BoardController : MonoBehaviour
     public void OnPointStartOccupied(BoardPointController point)
     {
         point.ChangeState(BoardPointType.Occupied);
+    }
+
+    public void OnFigureEnteredOnBoard(FigureController figure, int figureRange)
+    {
+        BoardPointController figurePoint = boardPointControllers.Find(x => x.GetTransform().position == figure.transform.position);
+        List<BoardPointController> pointsInRange;
+        List<BoardPointController> pointsInRangeInPath;
+        (pointsInRange, pointsInRangeInPath) = GetPointsInRange(figure.transform.position, figureRange);
+        figure.SetPointsForShoting(pointsInRange, pointsInRangeInPath);
+    }
+
+    private (List<BoardPointController>, List<BoardPointController>) GetPointsInRange(Vector3 figurePosition, int figureRange)
+    {
+        List<BoardPointController> pointsInRange = new List<BoardPointController>();
+        List<BoardPointController> pointsInRangePath = new List<BoardPointController>();
+
+        foreach (var point in boardPointControllers)
+        {
+            Vector3 position = point.transform.position;
+
+            if(Mathf.Abs(figurePosition.x - position.x) <= (float)figureRange && Mathf.Abs(figurePosition.z - position.z) <= (float)figureRange)
+            {
+                pointsInRange.Add(point);
+
+                if(point.BoardPointType == BoardPointType.Path)
+                {
+                    pointsInRangePath.Add(point);
+                }
+            }
+        }
+
+        pointsInRange.Reverse();
+        pointsInRangePath.Reverse();
+
+        return (pointsInRange, pointsInRangePath);
     }
 }

@@ -4,38 +4,28 @@ using UnityEngine;
 
 public class BulletController : MonoBehaviour
 {
-    public delegate Vector3 GetEnemyPosition();
-    public delegate void DealDamage(int damage);
-    public delegate bool IsAlive();
-
-    public GetEnemyPosition getEnemyPosition;
-    public DealDamage dealDamage;
-    public IsAlive isAlive;
-
+    private bool isAlive = false;
     private int damage;
     private float speed;
     private string enemyName;
-    private BulletConfig bulletConfig;
+    private OpponentController opponent;
 
-    public void Initialize(BulletConfig config, string enemyName, GetEnemyPosition getEnemyPosition, DealDamage dealDamage, IsAlive isAlive)
+    public void Initialize(BulletConfig config, OpponentController opponent)
     {
-        this.isAlive = isAlive;
-        this.dealDamage = dealDamage;
-        this.getEnemyPosition = getEnemyPosition;
-        this.enemyName = enemyName;
+        opponent.OnDead += OnEnemyDead;
+        this.transform.position = new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z);
+        this.opponent = opponent;
+        this.enemyName = opponent.name;
         damage = config.damage;
         speed = config.speed;
-
+        isAlive = true;
     }
 
     void FixedUpdate()
     {
-        if (isAlive())
+        if (isAlive)
         {
-            Vector3 enemyPosition = getEnemyPosition();
-            Vector3 direction = enemyPosition - transform.position;
-            direction.Normalize();
-            transform.Translate(direction * speed * Time.fixedDeltaTime);
+            this.transform.position = Vector3.MoveTowards(this.transform.position, opponent.transform.position, speed * Time.fixedDeltaTime);
         }
         else
         {
@@ -47,8 +37,13 @@ public class BulletController : MonoBehaviour
     {
         if (other.gameObject.name == enemyName)
         {
-            dealDamage(damage);
+            other.GetComponent<OpponentController>().DealDamage(damage);
             Destroy(this.gameObject);
         }
+    }
+
+    public void OnEnemyDead()
+    {
+        isAlive = false;
     }
 }
