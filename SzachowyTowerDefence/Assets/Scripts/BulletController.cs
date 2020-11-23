@@ -10,20 +10,20 @@ public class BulletController : MonoBehaviour
     private string enemyName;
     private OpponentController opponent;
 
-    public void Initialize(BulletConfig config, OpponentController opponent)
+    public void Initialize(BulletConfig config, OpponentController opponent, int damage)
     {
         opponent.OnDead += OnEnemyDead;
         this.transform.position = new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z);
         this.opponent = opponent;
         this.enemyName = opponent.name;
-        damage = config.damage;
+        this.damage = damage;
         speed = config.speed;
         isAlive = true;
     }
 
     void FixedUpdate()
     {
-        if (isAlive)
+        if (isAlive && opponent != null)
         {
             this.transform.position = Vector3.MoveTowards(this.transform.position, opponent.transform.position, speed * Time.fixedDeltaTime);
         }
@@ -42,7 +42,7 @@ public class BulletController : MonoBehaviour
         }
     }
 
-    public void OnEnemyDead()
+    public void OnEnemyDead(int reward)
     {
         isAlive = false;
     }

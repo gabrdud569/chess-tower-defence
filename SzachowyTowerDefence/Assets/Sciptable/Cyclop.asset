@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 062dbb8b2465b9046a973ced70757d95, type: 3}
   m_Name: Cyclop
   m_EditorClassIdentifier: 
-  maxLife: 10000
+  maxLife: 100
   speed: 3
   damage: 5
+  reward: 10

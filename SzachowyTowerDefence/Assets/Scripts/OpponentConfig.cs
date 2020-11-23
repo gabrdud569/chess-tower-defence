@@ -8,4 +8,5 @@ public class OpponentConfig : ScriptableObject
     [SerializeField] public int maxLife;
     [SerializeField] public int speed;
     [SerializeField] public int damage;
+    [SerializeField] public int reward;
 }

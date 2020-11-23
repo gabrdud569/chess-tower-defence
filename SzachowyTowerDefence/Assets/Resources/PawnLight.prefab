@@ -109,3 +109,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotingRange: 1
   bulletsPerShot: 1
+  damagePerBullet: 10
+  figureCost: 10

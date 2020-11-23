@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 062dbb8b2465b9046a973ced70757d95, type: 3}
   m_Name: Devil
   m_EditorClassIdentifier: 
-  maxLife: 50000
-  speed: 3
+  maxLife: 300
+  speed: 1
   damage: 20
+  reward: 30

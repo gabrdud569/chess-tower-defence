@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 062dbb8b2465b9046a973ced70757d95, type: 3}
   m_Name: Chicken
   m_EditorClassIdentifier: 
-  maxLife: 600
-  speed: 3
+  maxLife: 30
+  speed: 5
   damage: 1
+  reward: 2

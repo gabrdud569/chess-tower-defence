@@ -7,63 +7,55 @@ using TMPro;
 
 public class PointValuesController : MonoBehaviour
 {
-    private int currentValue = 100;
-    private int numberOfCards = 0;
     [SerializeField] private TMP_Text tmpText;
+    [SerializeField] private List<GameObject> cards;
+    
+    public event Action OnGetCard = delegate { };
+
+    private CurrentLevelController currentLevelController;
+    private int numberOfCards = 0;
     private int frame = 0;
+    private int currentValue;
 
-
-    // Start is called before the first frame update
-    void Start()
+    public void Init(CurrentLevelController currentLevelController, int pointsStartValue)
     {
+        this.currentLevelController = currentLevelController;
+        currentValue = pointsStartValue;
         tmpText.text = currentValue.ToString();
+        cards.ForEach((x) => x.gameObject.SetActive(false));
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        //this.frame++;
-        //if (this.frame >= 60)
-        //{
-        //    this.addOnePointPerSec();
-        //}
-    }
-
-    // Add points to score - killing mobs, surviving waves
-    public void addPoints(int value)
+    public void AddPoints(int value)
     {
         this.currentValue += value;
         tmpText.text = currentValue.ToString();
     }
 
-    // Remove points from score - placing figures
-    public void removePoints(int value)
+    public bool RemovePoints(int value)
     {
-        this.currentValue -= value;
+        currentValue -= value;
+
         if (currentValue < 0)
         {
-            this.addCard();
-            currentValue = 0;
+            currentValue += value;
+            AddCard();
+            OnGetCard();
+            tmpText.text = currentValue.ToString();
+            return false;
         }
+
         tmpText.text = currentValue.ToString();
+        return true;
     }
 
-    // Add yellow card
-    public void addCard()
+    private void AddCard()
     {
+        this.numberOfCards++;
+        cards[numberOfCards - 1].SetActive(true);
+
         if (this.numberOfCards >= 3)
         {
-            Console.WriteLine("GAME OVER");
+            currentLevelController.GameOver();
         }
-        this.numberOfCards++;
-
     }
-
-    // testing purposes
-    public void addOnePointPerSec()
-    {
-        this.addPoints(1);
-        this.frame = 0;
-    }
-
 }

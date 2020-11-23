@@ -70,7 +70,8 @@ public class BoardController : MonoBehaviour
         {
             Vector3 position = point.transform.position;
 
-            if(Mathf.Abs(figurePosition.x - position.x) <= (float)figureRange && Mathf.Abs(figurePosition.z - position.z) <= (float)figureRange)
+            if((Mathf.Abs(figurePosition.x - position.x) -0.5f < (float)figureRange)
+                && (Mathf.Abs(figurePosition.z - position.z) - 0.5f < (float)figureRange))
             {
                 pointsInRange.Add(point);
 

@@ -7,8 +7,15 @@ public class FigureController : MonoBehaviour
 {
     [SerializeField] private int shotingRange;
     [SerializeField] private int bulletsPerShot;
+    [SerializeField] private int damagePerBullet;
+    [SerializeField] private int figureCost;
 
+    public int ShotingRange => shotingRange;
+    public int BulletsPerShot => bulletsPerShot;
+    public int DamagePerBullet => damagePerBullet;
+    public int FigureCost => figureCost;
     public bool IsMoving => isMoving;
+
 
     private bool isMoving = false;
     private bool onBoard = false;
@@ -22,22 +29,19 @@ public class FigureController : MonoBehaviour
     private List<BoardPointController> boardPointsInRange;
     private List<BoardPointController> boardPointsInRangeInPath;
 
-    public bool StartMoveFigure(Vector3 endPosition, Action<FigureController, Vector3, int> onMoveEnded, AnimationCurve yCurve)
+    public void StartMoveFigure(Vector3 endPosition, Action<FigureController, Vector3, int> onMoveEnded, AnimationCurve yCurve)
     {
-        if (!isMoving && !onBoard)
-        {
-            this.startPosition = gameObject.transform.position;
-            this.onMoveEnded = onMoveEnded;
-            this.endPosition = endPosition;
-            this.curve = yCurve;
-            fullDistance = Mathf.Sqrt(Mathf.Pow(gameObject.transform.position.x - endPosition.x, 2) + Mathf.Pow(gameObject.transform.position.z - endPosition.z, 2));
-            isMoving = true;
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        this.startPosition = gameObject.transform.position;
+        this.onMoveEnded = onMoveEnded;
+        this.endPosition = endPosition;
+        this.curve = yCurve;
+        fullDistance = Mathf.Sqrt(Mathf.Pow(gameObject.transform.position.x - endPosition.x, 2) + Mathf.Pow(gameObject.transform.position.z - endPosition.z, 2));
+        isMoving = true;
+    }
+
+    public bool CanMoveFigure()
+    {
+        return !isMoving && !onBoard;
     }
 
     public void SetPointsForShoting(List<BoardPointController> boardPointsInRange, List<BoardPointController> boardPointsInRangeInPath)
@@ -79,7 +83,7 @@ public class FigureController : MonoBehaviour
                 bullet.transform.position = this.transform.position;
                 bullet.AddComponent<BulletController>();
                 bullet.AddComponent<BoxCollider>().isTrigger = true;
-                bullet.GetComponent<BulletController>().Initialize(Resources.Load<BulletConfig>("BulletConfig"), opponent);
+                bullet.GetComponent<BulletController>().Initialize(Resources.Load<BulletConfig>("BulletConfig"), opponent, damagePerBullet);
             }
 
             float frames = Time.fixedDeltaTime * 10;

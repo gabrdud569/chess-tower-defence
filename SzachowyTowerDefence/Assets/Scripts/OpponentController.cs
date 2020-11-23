@@ -9,12 +9,12 @@ public class OpponentController : MonoBehaviour
     [SerializeField] private OpponentConfig config;
 
     public event Action<int> OnDamageDealed = delegate { };
-    public event Action OnDead = delegate { };
+    public event Action<int> OnDead = delegate { };
 
     private List<PathElement> path;
     private PathElement currentPathElement;
     private int currentLife;
-    private int currentSpeed;
+    private float currentSpeed;
     private int damage;
     private bool isAlive = false;
     private bool destructible = false;
@@ -27,13 +27,14 @@ public class OpponentController : MonoBehaviour
         }
     }
 
-    public void Initialize(List<PathElement> path, OpponentConfig config)
+    public void Initialize(List<PathElement> path, OpponentConfig config, int multiplier)
     {
         this.path = path;
         this.config = config;
-        currentLife = config.maxLife;
-        currentSpeed = config.speed;
-        damage = config.damage;
+        
+        currentLife = config.maxLife * Mathf.Max(1, Convert.ToInt32(multiplier / 10f));
+        currentSpeed = config.speed*Mathf.Min(Mathf.Max(1, Convert.ToInt32(multiplier / 10f)),8f);
+        damage = (int)config.damage* Mathf.Max(1, Convert.ToInt32(multiplier/10f));
         isAlive = true;
         this.enabled = true;
         StartMovement();
@@ -86,11 +87,11 @@ public class OpponentController : MonoBehaviour
         else
         {
             currentLife = 0;
-            RefreshMonsterState();
+            RefreshMonsterState(false);
         }
     }
 
-    private void RefreshMonsterState()
+    private void RefreshMonsterState(bool withCallback = true)
     {
         if(currentLife <= 0)
         {
@@ -101,8 +102,11 @@ public class OpponentController : MonoBehaviour
                 currentPathElement.LeaveFromThisPoint(this);
             }
 
-            OnDead();
-            //animator.SetBool("Dead", true);
+            if (withCallback)
+            {
+                OnDead(config.reward);
+            }
+
             Destroy(this.gameObject);
         }
     }

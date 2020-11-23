@@ -9,11 +9,13 @@ public class FiguresManager : MonoBehaviour
 
     public event Action<FigureController, int> OnFigureOnBoardAction = delegate { };
 
+    private PointValuesController pointValuesController;
     private FigureController figureToPlace;
     private List<string> figuresNames;
 
-    public void Init()
+    public void Init(PointValuesController pointValuesController)
     {
+        this.pointValuesController = pointValuesController;
         figuresNames = new List<string>();
         figures.ForEach(x => figuresNames.Add(x.name));
     }
@@ -45,8 +47,9 @@ public class FiguresManager : MonoBehaviour
     {
         if (figureToPlace != null)
         {
-            if(figureToPlace.StartMoveFigure(endPosition, OnFigureOnBoard, curve))
+            if(figureToPlace.CanMoveFigure() && pointValuesController.RemovePoints(figureToPlace.FigureCost))
             {
+                figureToPlace.StartMoveFigure(endPosition, OnFigureOnBoard, curve);
                 onSuccesFigureMoving(point);
             }
 

@@ -95,6 +95,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotingRange: 2
   bulletsPerShot: 3
+  damagePerBullet: 10
+  figureCost: 25
 --- !u!64 &5295688899804225273
 MeshCollider:
   m_ObjectHideFlags: 0

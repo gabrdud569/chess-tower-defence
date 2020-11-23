@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 057e3c55014aa2246819b9676c2f96eb, type: 3}
   m_Name: BulletConfig
   m_EditorClassIdentifier: 
-  damage: 500
-  speed: 6
+  speed: 10

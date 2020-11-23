@@ -11,8 +11,13 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private BoardController boardController;
 
     private List<PathElement> path;
-    public void Init()
+    private PointValuesController pointValuesController;
+    private CurrentLevelController currentLevelController;
+
+    public void Init(PointValuesController pointValuesController, CurrentLevelController currentLevelController)
     {
+        this.pointValuesController = pointValuesController;
+        this.currentLevelController = currentLevelController;
         path = pathProvider.StartPathElements;
         path.AddRange(boardController.GetPath());
         path.AddRange(pathProvider.EndPathElements);
@@ -21,20 +26,38 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator SpawnEnemy()
     {
-        for (int j = 0; j < 10; j++)
-        {
-            int randomValue = Random.Range(0, 3);
-            int i = 10;
+        int stageMultiplier = 1;
 
-            while (i-- > 0)
+        while (true)
+        {
+            for (int j = 0; j < 3; j++)
             {
-                yield return new WaitForSeconds(1f);
-                GameObject enemyPrefab = Instantiate(enemyPrefabs[randomValue]);
-                enemyPrefab.name = System.Guid.NewGuid().ToString();
-                enemyPrefab.transform.position = this.transform.position;
-                enemyPrefab.transform.SetParent(this.gameObject.transform);
-                enemyPrefab.GetComponent<OpponentController>().Initialize(path, opponentConfig[randomValue]);
+                int i = 2;
+
+                while (i-- > 0)
+                {
+                    yield return new WaitForSeconds(1f);
+                    GameObject enemyPrefab = Instantiate(enemyPrefabs[j]);
+                    enemyPrefab.name = System.Guid.NewGuid().ToString();
+                    enemyPrefab.transform.position = this.transform.position;
+                    enemyPrefab.transform.SetParent(this.gameObject.transform);
+                    enemyPrefab.GetComponent<OpponentController>().OnDead += OnEnemyDead;
+                    enemyPrefab.GetComponent<OpponentController>().OnDamageDealed += OnEnemyEndPath;
+                    enemyPrefab.GetComponent<OpponentController>().Initialize(path, opponentConfig[j], stageMultiplier);
+                }
             }
+
+            stageMultiplier++;
         }
+    }
+
+    private void OnEnemyDead(int reward)
+    {
+        pointValuesController.AddPoints(reward);
+    }
+
+    private void OnEnemyEndPath(int hpToRemove)
+    {
+        currentLevelController.RemoveHp(hpToRemove);
     }
 }

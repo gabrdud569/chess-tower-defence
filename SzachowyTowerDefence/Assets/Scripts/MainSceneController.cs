@@ -8,12 +8,16 @@ public class MainSceneController : MonoBehaviour
     [SerializeField] private EnemySpawner enemySpawner;
     [SerializeField] private ClickDetectController clickDetectController;
     [SerializeField] private FiguresManager figuresManager;
+    [SerializeField] private PointValuesController pointValuesController;
+    [SerializeField] private CurrentLevelController levelController;
 
     private void Start()
     {
-        figuresManager.Init();
+        levelController.Init();
+        pointValuesController.Init(levelController, levelController.StartPoints);
+        figuresManager.Init(pointValuesController);
         boardController.Init(figuresManager);
-        enemySpawner.Init();
+        enemySpawner.Init(pointValuesController, levelController);
         clickDetectController.Init(boardController, figuresManager);
     }
 }
