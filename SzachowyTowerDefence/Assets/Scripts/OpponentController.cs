@@ -7,7 +7,6 @@ public class OpponentController : MonoBehaviour
 {
     [SerializeField] private Animator animator;
     [SerializeField] private OpponentConfig config;
-    [SerializeField] private PointsController pointsController;
 
     public event Action<int> OnDamageDealed = delegate { };
     public event Action OnDead = delegate { };

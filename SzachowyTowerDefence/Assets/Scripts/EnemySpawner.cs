@@ -9,7 +9,6 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private GameObject endPoint;
     [SerializeField] private PathProvider pathProvider;
     [SerializeField] private BoardController boardController;
-    [SerializeField] private PointsController pointsController;
 
     private List<PathElement> path;
     public void Init()

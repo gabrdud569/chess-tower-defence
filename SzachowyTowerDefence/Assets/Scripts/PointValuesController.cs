@@ -4,11 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class PointsController : MonoBehaviour
+
+public class PointValuesController : MonoBehaviour
 {
     private int currentValue = 100;
     private int numberOfCards = 0;
-    [SerializeField]private TMP_Text tmpText;
+    [SerializeField] private TMP_Text tmpText;
     private int frame = 0;
 
 
@@ -29,17 +30,17 @@ public class PointsController : MonoBehaviour
     }
 
     // Add points to score - killing mobs, surviving waves
-   public void addPoints(int value)
-   {
+    public void addPoints(int value)
+    {
         this.currentValue += value;
         tmpText.text = currentValue.ToString();
-   }
+    }
 
     // Remove points from score - placing figures
     public void removePoints(int value)
     {
         this.currentValue -= value;
-        if(currentValue < 0)
+        if (currentValue < 0)
         {
             this.addCard();
             currentValue = 0;
@@ -50,7 +51,7 @@ public class PointsController : MonoBehaviour
     // Add yellow card
     public void addCard()
     {
-        if(this.numberOfCards >= 3)
+        if (this.numberOfCards >= 3)
         {
             Console.WriteLine("GAME OVER");
         }
