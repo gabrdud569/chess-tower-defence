@@ -33,7 +33,8 @@ public class OpponentController : MonoBehaviour
         this.config = config;
         
         currentLife = config.maxLife * Mathf.Max(1, Convert.ToInt32(multiplier / 10f));
-        currentSpeed = config.speed*Mathf.Min(Mathf.Max(1, Convert.ToInt32(multiplier / 10f)),8f);
+        currentSpeed = config.speed*Mathf.Min(Mathf.Max(1, Convert.ToInt32(multiplier / 10f)),5f);
+        currentSpeed = Mathf.Min(5f, currentSpeed);
         damage = (int)config.damage* Mathf.Max(1, Convert.ToInt32(multiplier/10f));
         isAlive = true;
         this.enabled = true;

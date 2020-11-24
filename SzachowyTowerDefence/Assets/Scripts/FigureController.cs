@@ -61,29 +61,18 @@ public class FigureController : MonoBehaviour
     {
         while (readyForShoting)
         {
-            List<OpponentController> opponentsToShot = new List<OpponentController>();
-
-            for (int i = 0; i < bulletsPerShot; i++)
-            {
-                OpponentController newOpponent = GetNextOpponentToShot(opponentsToShot);
-
-                if (newOpponent != null)
-                {
-                    opponentsToShot.Add(newOpponent);
-                }
-                else
-                {
-                    break;
-                }
-            }
+            List<OpponentController> opponentsToShot = GetNextOpponentToShot(bulletsPerShot);
 
             foreach (var opponent in opponentsToShot)
             {
-                GameObject bullet = Instantiate(Resources.Load<GameObject>("BlueBullet"));
-                bullet.transform.position = this.transform.position;
-                bullet.AddComponent<BulletController>();
-                bullet.AddComponent<BoxCollider>().isTrigger = true;
-                bullet.GetComponent<BulletController>().Initialize(Resources.Load<BulletConfig>("BulletConfig"), opponent, damagePerBullet);
+                if (opponent != null)
+                {
+                    GameObject bullet = Instantiate(Resources.Load<GameObject>("BlueBullet"));
+                    bullet.transform.position = this.transform.position;
+                    bullet.AddComponent<BulletController>();
+                    bullet.AddComponent<BoxCollider>().isTrigger = true;
+                    bullet.GetComponent<BulletController>().Initialize(Resources.Load<BulletConfig>("BulletConfig"), opponent, damagePerBullet);
+                }
             }
 
             float frames = Time.fixedDeltaTime * 10;
@@ -91,20 +80,24 @@ public class FigureController : MonoBehaviour
         }
     }
 
-    private OpponentController GetNextOpponentToShot(List<OpponentController> opponentsToShot)
+    private List<OpponentController> GetNextOpponentToShot(int count)
     {
+        List<OpponentController> opponentControllers = new List<OpponentController>();
+
         foreach (var point in boardPointsInRangeInPath)
         {
             foreach (var opponent in point.OpponentControllers)
             {
-                if (!opponentsToShot.Contains(opponent))
+                opponentControllers.Add(opponent);
+
+                if (opponentControllers.Count >= count)
                 {
-                    return opponent;
+                    return opponentControllers;
                 }
             }
         }
 
-        return null;
+        return opponentControllers;
     }
 
     private void MovingToBoardAnimation()

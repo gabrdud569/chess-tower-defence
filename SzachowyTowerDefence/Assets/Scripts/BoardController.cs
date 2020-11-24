@@ -84,7 +84,6 @@ public class BoardController : MonoBehaviour
 
         pointsInRange.Reverse();
         pointsInRangePath.Reverse();
-
         return (pointsInRange, pointsInRangePath);
     }
 }

@@ -39,7 +39,7 @@ public class CurrentLevelController : MonoBehaviour
     {
         if(stopwatch != null && stopwatch.IsRunning && TimeInThisRun.gameObject.activeSelf)
         {
-            TimeInThisRun.text = stopwatch.Elapsed.Seconds.ToString();
+            TimeInThisRun.text = ((int)stopwatch.Elapsed.TotalSeconds).ToString();
         }
     }
 
