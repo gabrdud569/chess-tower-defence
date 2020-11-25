@@ -4,12 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-
+/// <summary>
+/// Point Value Controller - controlls points accumulated by the user
+/// </summary>
 public class PointValuesController : MonoBehaviour
 {
     [SerializeField] private TMP_Text tmpText;
     [SerializeField] private List<GameObject> cards;
-    
+
     public event Action OnGetCard = delegate { };
 
     private CurrentLevelController currentLevelController;
@@ -25,12 +27,18 @@ public class PointValuesController : MonoBehaviour
         cards.ForEach((x) => x.gameObject.SetActive(false));
     }
 
+    /// <summary>
+    /// Adds user points
+    /// </summary>
     public void AddPoints(int value)
     {
         this.currentValue += value;
         tmpText.text = currentValue.ToString();
     }
 
+    /// <summary>
+    /// Subtracts user points
+    /// </summary>
     public bool RemovePoints(int value)
     {
         currentValue -= value;
@@ -48,6 +56,9 @@ public class PointValuesController : MonoBehaviour
         return true;
     }
 
+    /// <summary>
+    /// Adds penalty card (yellow) to user
+    /// </summary>
     private void AddCard()
     {
         this.numberOfCards++;

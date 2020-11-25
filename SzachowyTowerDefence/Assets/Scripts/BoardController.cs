@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Board Controller - controls chess board
+/// </summary>
 public class BoardController : MonoBehaviour
 {
     [SerializeField] private List<BoardPointController> boardPointControllers;
@@ -22,6 +25,10 @@ public class BoardController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Gets path on board
+    /// </summary>
+    /// <returns></returns>
     public List<PathElement> GetPath()
     {
         List<PathElement> path = new List<PathElement>();
@@ -37,21 +44,34 @@ public class BoardController : MonoBehaviour
         return path;
     }
 
+    /// <summary>
+    /// Invoked after clicking on board
+    /// </summary>
+    /// <param name="objectName"></param>
     public void OnClickDetected(string objectName)
     {
         BoardPointController point = boardPointControllers.Find(x => x.name == objectName);
 
-        if(point != null && point.BoardPointType != BoardPointType.Occupied && point.BoardPointType != BoardPointType.Path)
+        if (point != null && point.BoardPointType != BoardPointType.Occupied && point.BoardPointType != BoardPointType.Path)
         {
             figuresManager.OnPointOnBoardClicked(point.transform.position, point, OnPointStartOccupied);
         }
     }
 
+    /// <summary>
+    /// Invoked after tile becoms occupied
+    /// </summary>
+    /// <param name="point">Tile on board</param>
     public void OnPointStartOccupied(BoardPointController point)
     {
         point.ChangeState(BoardPointType.Occupied);
     }
 
+    /// <summary>
+    /// Invoked after chess piece was placed on board
+    /// </summary>
+    /// <param name="figure">Chess piece controller</param>
+    /// <param name="figureRange">Chess piece range</param>
     public void OnFigureEnteredOnBoard(FigureController figure, int figureRange)
     {
         BoardPointController figurePoint = boardPointControllers.Find(x => x.GetTransform().position == figure.transform.position);
@@ -61,6 +81,12 @@ public class BoardController : MonoBehaviour
         figure.SetPointsForShoting(pointsInRange, pointsInRangeInPath);
     }
 
+    /// <summary>
+    /// Returns tiles on board, that are in range of chess piece
+    /// </summary>
+    /// <param name="figurePosition">Chess piece position</param>
+    /// <param name="figureRange">Chesse piece range</param>
+    /// <returns></returns>
     private (List<BoardPointController>, List<BoardPointController>) GetPointsInRange(Vector3 figurePosition, int figureRange)
     {
         List<BoardPointController> pointsInRange = new List<BoardPointController>();
@@ -70,12 +96,12 @@ public class BoardController : MonoBehaviour
         {
             Vector3 position = point.transform.position;
 
-            if((Mathf.Abs(figurePosition.x - position.x) -0.5f < (float)figureRange)
+            if ((Mathf.Abs(figurePosition.x - position.x) - 0.5f < (float)figureRange)
                 && (Mathf.Abs(figurePosition.z - position.z) - 0.5f < (float)figureRange))
             {
                 pointsInRange.Add(point);
 
-                if(point.BoardPointType == BoardPointType.Path)
+                if (point.BoardPointType == BoardPointType.Path)
                 {
                     pointsInRangePath.Add(point);
                 }

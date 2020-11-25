@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Bullet Controller - controlls bullet motion
+/// </summary>
 public class BulletController : MonoBehaviour
 {
     private bool isAlive = false;
@@ -21,6 +24,9 @@ public class BulletController : MonoBehaviour
         isAlive = true;
     }
 
+    /// <summary>
+    /// Moves bullet into enemy direction
+    /// </summary>
     void FixedUpdate()
     {
         if (isAlive && opponent != null)
@@ -33,6 +39,10 @@ public class BulletController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Detects collision with enemy and deals damange
+    /// </summary>
+    /// <param name="other">Enemy</param>
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name == enemyName)
@@ -42,6 +52,10 @@ public class BulletController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Inoved when enemy dies
+    /// </summary>
+    /// <param name="reward">Reward</param>
     public void OnEnemyDead(int reward)
     {
         isAlive = false;

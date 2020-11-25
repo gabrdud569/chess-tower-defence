@@ -6,6 +6,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/// <summary>
+/// Current Level Controller - controls levels in game
+/// </summary>
 public class CurrentLevelController : MonoBehaviour
 {
     [SerializeField] private int startHp;
@@ -35,19 +38,26 @@ public class CurrentLevelController : MonoBehaviour
         hpText.text = currentHp.ToString();
     }
 
+    /// <summary>
+    /// Updates current level time
+    /// </summary>
     private void FixedUpdate()
     {
-        if(stopwatch != null && stopwatch.IsRunning && TimeInThisRun.gameObject.activeSelf)
+        if (stopwatch != null && stopwatch.IsRunning && TimeInThisRun.gameObject.activeSelf)
         {
             TimeInThisRun.text = ((int)stopwatch.Elapsed.TotalSeconds).ToString();
         }
     }
 
+    /// <summary>
+    /// Removes user health points, invoked by enemy passing finish line
+    /// </summary>
+    /// <param name="hp"></param>
     public void RemoveHp(int hp)
     {
         currentHp -= hp;
 
-        if(currentHp <= 0)
+        if (currentHp <= 0)
         {
             GameOver();
         }
@@ -55,6 +65,9 @@ public class CurrentLevelController : MonoBehaviour
         hpText.text = currentHp.ToString();
     }
 
+    /// <summary>
+    /// Invoked on end of game
+    /// </summary>
     public void GameOver()
     {
         stopwatch.Stop();
@@ -63,12 +76,18 @@ public class CurrentLevelController : MonoBehaviour
         backToMainMenuButton.gameObject.SetActive(true);
     }
 
+    /// <summary>
+    /// Loads scene on restart
+    /// </summary>
     public void OnRestart()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainScene");
     }
 
+    /// <summary>
+    /// Loads scene on back to main scene
+    /// </summary>
     public void OnBackToMainScene()
     {
         Time.timeScale = 1f;

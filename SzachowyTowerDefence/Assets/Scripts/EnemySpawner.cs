@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Enemy Spawner - creates enemies
+/// </summary>
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private List<GameObject> enemyPrefabs;
@@ -24,6 +27,10 @@ public class EnemySpawner : MonoBehaviour
         StartCoroutine(SpawnEnemy());
     }
 
+    /// <summary>
+    /// Creates enemies on board
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator SpawnEnemy()
     {
         int stageMultiplier = 1;
@@ -51,11 +58,19 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Invoked after enemy death, increases user points
+    /// </summary>
+    /// <param name="reward"></param>
     private void OnEnemyDead(int reward)
     {
         pointValuesController.AddPoints(reward);
     }
 
+    /// <summary>
+    /// Invked after enemy passing finish line, removes health points
+    /// </summary>
+    /// <param name="hpToRemove"></param>
     private void OnEnemyEndPath(int hpToRemove)
     {
         currentLevelController.RemoveHp(hpToRemove);
