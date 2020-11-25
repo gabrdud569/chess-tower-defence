@@ -2,12 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Board Point Controller - controls board types
+/// </summary>
 public class BoardPointController : PathElement
 {
     public BoardPointType BoardPointType => boardPointType;
 
     private BoardPointType boardPointType;
 
+    /// <summary>
+    /// Sets tiles visibility
+    /// </summary>
+    /// <param name="visible">Value of visibility</param>
     public void SetVisible(bool visible)
     {
         for (int i = 0; i < gameObject.transform.childCount; i++)
@@ -16,12 +23,16 @@ public class BoardPointController : PathElement
         }
     }
 
+    /// <summary>
+    /// Changes board tile state, depending on a given value
+    /// </summary>
+    /// <param name="boardPointType">Board tile type</param>
     public void ChangeState(BoardPointType boardPointType)
     {
         this.boardPointType = boardPointType;
         string materialName = "Highlights";
 
-        switch(boardPointType)
+        switch (boardPointType)
         {
             case BoardPointType.Free:
                 materialName += "Free";

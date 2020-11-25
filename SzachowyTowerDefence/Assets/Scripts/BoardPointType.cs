@@ -1,4 +1,7 @@
-﻿public enum BoardPointType
+﻿/// <summary>
+/// Classifies board tiles
+/// </summary>
+public enum BoardPointType
 {
     Free = 0,
     Path = 1,

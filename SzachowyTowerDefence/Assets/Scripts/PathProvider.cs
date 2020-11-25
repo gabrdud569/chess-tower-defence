@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Path provider - defines first and last element on path
+/// </summary>
 public class PathProvider : MonoBehaviour
 {
     [SerializeField] private List<PathElement> startPathElements;

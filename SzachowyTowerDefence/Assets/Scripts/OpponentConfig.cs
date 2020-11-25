@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Opponent config - specifies enemy life, speed, damage, reward
+/// </summary>
 [CreateAssetMenu(fileName = "OpponentConfig", menuName = "OpponentConfig")]
 public class OpponentConfig : ScriptableObject
 {

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Click Detect Controller - controls mouse detection
+/// </summary>
 public class ClickDetectController : MonoBehaviour
 {
     private BoardController boardController;
@@ -13,6 +16,9 @@ public class ClickDetectController : MonoBehaviour
         this.figuresManager = figuresManager;
     }
 
+    /// <summary>
+    /// Detects mouse click and invokes dedicaated controllers
+    /// </summary>
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))

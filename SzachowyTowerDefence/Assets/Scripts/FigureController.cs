@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Figure Controller - controls chess pieces
+/// </summary>
 public class FigureController : MonoBehaviour
 {
     [SerializeField] private int shotingRange;
@@ -28,7 +31,12 @@ public class FigureController : MonoBehaviour
 
     private List<BoardPointController> boardPointsInRange;
     private List<BoardPointController> boardPointsInRangeInPath;
-
+    /// <summary>
+    /// Invoked after 
+    /// </summary>
+    /// <param name="endPosition">End position</param>
+    /// <param name="onMoveEnded">Callback to event of end of movement</param>
+    /// <param name="yCurve">Piece track</param>
     public void StartMoveFigure(Vector3 endPosition, Action<FigureController, Vector3, int> onMoveEnded, AnimationCurve yCurve)
     {
         this.startPosition = gameObject.transform.position;
@@ -39,11 +47,20 @@ public class FigureController : MonoBehaviour
         isMoving = true;
     }
 
+    /// <summary>
+    /// Defines whether figure can be moved
+    /// </summary>
+    /// <returns></returns>
     public bool CanMoveFigure()
     {
         return !isMoving && !onBoard;
     }
 
+    /// <summary>
+    /// Sets points for shooting
+    /// </summary>
+    /// <param name="boardPointsInRange">All points in range</param>
+    /// <param name="boardPointsInRangeInPath">Points in range on path</param>
     public void SetPointsForShoting(List<BoardPointController> boardPointsInRange, List<BoardPointController> boardPointsInRangeInPath)
     {
         this.boardPointsInRange = boardPointsInRange;
@@ -52,11 +69,18 @@ public class FigureController : MonoBehaviour
         StartCoroutine(Shot());
     }
 
+    /// <summary>
+    /// Invokes moving animation
+    /// </summary>
     private void FixedUpdate()
     {
         MovingToBoardAnimation();
     }
 
+    /// <summary>
+    /// Shoots bullets to enemies
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator Shot()
     {
         while (readyForShoting)
@@ -80,6 +104,11 @@ public class FigureController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Gets enemy to shot
+    /// </summary>
+    /// <param name="count"></param>
+    /// <returns></returns>
     private List<OpponentController> GetNextOpponentToShot(int count)
     {
         List<OpponentController> opponentControllers = new List<OpponentController>();
@@ -100,6 +129,9 @@ public class FigureController : MonoBehaviour
         return opponentControllers;
     }
 
+    /// <summary>
+    /// Chess piece moving to tile on board animation
+    /// </summary>
     private void MovingToBoardAnimation()
     {
         if (isMoving)

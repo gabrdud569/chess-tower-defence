@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Main Scene Controller - initializes all managers and controller
+/// </summary>
 public class MainSceneController : MonoBehaviour
 {
     [SerializeField] private BoardController boardController;
@@ -11,6 +14,10 @@ public class MainSceneController : MonoBehaviour
     [SerializeField] private PointValuesController pointValuesController;
     [SerializeField] private CurrentLevelController levelController;
 
+
+    /// <summary>
+    /// Creates controllers, spawners and managers
+    /// </summary>
     private void Start()
     {
         levelController.Init();
