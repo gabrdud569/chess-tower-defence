@@ -43,7 +43,7 @@ public class CurrentLevelController : MonoBehaviour
     /// </summary>
     private void FixedUpdate()
     {
-        if(stopwatch != null && stopwatch.IsRunning && TimeInThisRun.gameObject.activeSelf)
+        if (stopwatch != null && stopwatch.IsRunning && TimeInThisRun.gameObject.activeSelf)
         {
             TimeInThisRun.text = ((int)stopwatch.Elapsed.TotalSeconds).ToString();
         }
@@ -57,7 +57,7 @@ public class CurrentLevelController : MonoBehaviour
     {
         currentHp -= hp;
 
-        if(currentHp <= 0)
+        if (currentHp <= 0)
         {
             GameOver();
         }

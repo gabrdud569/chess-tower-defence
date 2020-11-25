@@ -64,7 +64,7 @@ public class FiguresManager : MonoBehaviour
     {
         if (figureToPlace != null)
         {
-            if(figureToPlace.CanMoveFigure() && pointValuesController.RemovePoints(figureToPlace.FigureCost))
+            if (figureToPlace.CanMoveFigure() && pointValuesController.RemovePoints(figureToPlace.FigureCost))
             {
                 figureToPlace.StartMoveFigure(endPosition, OnFigureOnBoard, curve);
                 onSuccesFigureMoving(point);

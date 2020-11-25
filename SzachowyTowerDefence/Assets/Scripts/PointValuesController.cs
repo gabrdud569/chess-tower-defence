@@ -11,7 +11,7 @@ public class PointValuesController : MonoBehaviour
 {
     [SerializeField] private TMP_Text tmpText;
     [SerializeField] private List<GameObject> cards;
-    
+
     public event Action OnGetCard = delegate { };
 
     private CurrentLevelController currentLevelController;
