@@ -17,13 +17,16 @@ public class ClickDetectController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            if (Physics.Raycast(ray, out hit))
+            if (Camera.main != null && Camera.main.name == "Main Camera")
             {
-                boardController.OnClickDetected(hit.transform.name);
-                figuresManager.OnClickDetected(hit.transform.name);
+                RaycastHit hit;
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+                if (Physics.Raycast(ray, out hit))
+                {
+                    boardController.OnClickDetected(hit.transform.name);
+                    figuresManager.OnClickDetected(hit.transform.name);
+                }
             }
         }
     }
