@@ -47,6 +47,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Opponent Controller - conrtols enemies  
+ <a href="class_opponent_controller.html#details">More...</a></p>
+
 <p>Inherits MonoBehaviour.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -54,14 +57,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8dc31ef0e58a3f0c19ef54d7297d6c95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_opponent_controller.html#a8dc31ef0e58a3f0c19ef54d7297d6c95">Initialize</a> (List&lt; <a class="el" href="class_path_element.html">PathElement</a> &gt; path, <a class="el" href="class_opponent_config.html">OpponentConfig</a> config, int multiplier)</td></tr>
 <tr class="separator:a8dc31ef0e58a3f0c19ef54d7297d6c95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f3695cdbb5a45c8bcea67ab2569b39c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_opponent_controller.html#a9f3695cdbb5a45c8bcea67ab2569b39c">StartMovement</a> ()</td></tr>
+<tr class="memdesc:a9f3695cdbb5a45c8bcea67ab2569b39c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes enemy movement  <a href="class_opponent_controller.html#a9f3695cdbb5a45c8bcea67ab2569b39c">More...</a><br /></td></tr>
 <tr class="separator:a9f3695cdbb5a45c8bcea67ab2569b39c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4f06caefe957cb8f252b1ea677f34f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_opponent_controller.html#ae4f06caefe957cb8f252b1ea677f34f9">OnPointInPathEntered</a> (<a class="el" href="class_path_element.html">PathElement</a> pathElement)</td></tr>
+<tr class="memdesc:ae4f06caefe957cb8f252b1ea677f34f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoked after enemy enters new map tile  <a href="class_opponent_controller.html#ae4f06caefe957cb8f252b1ea677f34f9">More...</a><br /></td></tr>
 <tr class="separator:ae4f06caefe957cb8f252b1ea677f34f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae038017eef4ffaaaed6ee1f9f1e0bbcd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_opponent_controller.html#ae038017eef4ffaaaed6ee1f9f1e0bbcd">DealDamage</a> (int damage)</td></tr>
+<tr class="memdesc:ae038017eef4ffaaaed6ee1f9f1e0bbcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoked after bullet hits enemy  <a href="class_opponent_controller.html#ae038017eef4ffaaaed6ee1f9f1e0bbcd">More...</a><br /></td></tr>
 <tr class="separator:ae038017eef4ffaaaed6ee1f9f1e0bbcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd37b4477a49f9741160ec47f3197f54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_opponent_controller.html#afd37b4477a49f9741160ec47f3197f54">OnEndPointAchieved</a> ()</td></tr>
+<tr class="memdesc:afd37b4477a49f9741160ec47f3197f54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoked after enemy reaches finish line  <a href="class_opponent_controller.html#afd37b4477a49f9741160ec47f3197f54">More...</a><br /></td></tr>
 <tr class="separator:afd37b4477a49f9741160ec47f3197f54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a014afdbc7e9853daf4fb20622fc3db57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_opponent_controller.html#a014afdbc7e9853daf4fb20622fc3db57">OnStartMoveOnBoard</a> ()</td></tr>
+<tr class="memdesc:a014afdbc7e9853daf4fb20622fc3db57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoed after enemy starts moving on board  <a href="class_opponent_controller.html#a014afdbc7e9853daf4fb20622fc3db57">More...</a><br /></td></tr>
 <tr class="separator:a014afdbc7e9853daf4fb20622fc3db57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="events"></a>
@@ -71,7 +79,9 @@ Events</h2></td></tr>
 <tr class="memitem:ab9c542ed6fe0af199458acfcc90401cd"><td class="memItemLeft" align="right" valign="top">Action&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_opponent_controller.html#ab9c542ed6fe0af199458acfcc90401cd">OnDead</a> = delegate { }</td></tr>
 <tr class="separator:ab9c542ed6fe0af199458acfcc90401cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Opponent Controller - conrtols enemies </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae038017eef4ffaaaed6ee1f9f1e0bbcd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae038017eef4ffaaaed6ee1f9f1e0bbcd">&#9670;&nbsp;</a></span>DealDamage()</h2>
 
@@ -87,6 +97,14 @@ Events</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Invoked after bullet hits enemy </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">damage</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -139,6 +157,8 @@ Events</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Invoked after enemy reaches finish line </p>
+
 </div>
 </div>
 <a id="ae4f06caefe957cb8f252b1ea677f34f9"></a>
@@ -157,6 +177,14 @@ Events</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Invoked after enemy enters new map tile </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pathElement</td><td>Tile on map</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a014afdbc7e9853daf4fb20622fc3db57"></a>
@@ -174,6 +202,8 @@ Events</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Invoed after enemy starts moving on board </p>
+
 </div>
 </div>
 <a id="a9f3695cdbb5a45c8bcea67ab2569b39c"></a>
@@ -190,6 +220,8 @@ Events</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Initializes enemy movement </p>
 
 </div>
 </div>
@@ -228,7 +260,7 @@ Events</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 24 2020 21:46:56 for SzachowyTowerDefence by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Nov 25 2020 20:53:57 for SzachowyTowerDefence by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.18
 </small></address>

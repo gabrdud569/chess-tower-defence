@@ -46,6 +46,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Board Controller - controls chess board  
+ <a href="class_board_controller.html#details">More...</a></p>
+
 <p>Inherits MonoBehaviour.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -53,15 +56,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa64e8abdbc121b6e034988ce8ab458d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_controller.html#aa64e8abdbc121b6e034988ce8ab458d8">Init</a> (<a class="el" href="class_figures_manager.html">FiguresManager</a> figuresManager)</td></tr>
 <tr class="separator:aa64e8abdbc121b6e034988ce8ab458d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64ff670e5dac5da806ed53067493ac5f"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_path_element.html">PathElement</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_controller.html#a64ff670e5dac5da806ed53067493ac5f">GetPath</a> ()</td></tr>
+<tr class="memdesc:a64ff670e5dac5da806ed53067493ac5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets path on board  <a href="class_board_controller.html#a64ff670e5dac5da806ed53067493ac5f">More...</a><br /></td></tr>
 <tr class="separator:a64ff670e5dac5da806ed53067493ac5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09ec091c2fdb22545d90ec101467fd37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_controller.html#a09ec091c2fdb22545d90ec101467fd37">OnClickDetected</a> (string objectName)</td></tr>
+<tr class="memdesc:a09ec091c2fdb22545d90ec101467fd37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoked after clicking on board  <a href="class_board_controller.html#a09ec091c2fdb22545d90ec101467fd37">More...</a><br /></td></tr>
 <tr class="separator:a09ec091c2fdb22545d90ec101467fd37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae869ef182f862d93f2c21daa251b763b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_controller.html#ae869ef182f862d93f2c21daa251b763b">OnPointStartOccupied</a> (<a class="el" href="class_board_point_controller.html">BoardPointController</a> point)</td></tr>
+<tr class="memdesc:ae869ef182f862d93f2c21daa251b763b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoked after tile becoms occupied  <a href="class_board_controller.html#ae869ef182f862d93f2c21daa251b763b">More...</a><br /></td></tr>
 <tr class="separator:ae869ef182f862d93f2c21daa251b763b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8ebd1d7e2cc4b01c5973a53917f7bfb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_controller.html#ad8ebd1d7e2cc4b01c5973a53917f7bfb">OnFigureEnteredOnBoard</a> (<a class="el" href="class_figure_controller.html">FigureController</a> figure, int figureRange)</td></tr>
+<tr class="memdesc:ad8ebd1d7e2cc4b01c5973a53917f7bfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoked after chess piece was placed on board  <a href="class_board_controller.html#ad8ebd1d7e2cc4b01c5973a53917f7bfb">More...</a><br /></td></tr>
 <tr class="separator:ad8ebd1d7e2cc4b01c5973a53917f7bfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Board Controller - controls chess board </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a64ff670e5dac5da806ed53067493ac5f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a64ff670e5dac5da806ed53067493ac5f">&#9670;&nbsp;</a></span>GetPath()</h2>
 
@@ -76,6 +85,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Gets path on board </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -113,6 +125,14 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Invoked after clicking on board </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">objectName</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ad8ebd1d7e2cc4b01c5973a53917f7bfb"></a>
@@ -141,6 +161,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Invoked after chess piece was placed on board </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">figure</td><td>Chess piece controller</td></tr>
+    <tr><td class="paramname">figureRange</td><td>Chess piece range</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ae869ef182f862d93f2c21daa251b763b"></a>
@@ -159,6 +188,14 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Invoked after tile becoms occupied </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">point</td><td>Tile on board</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -167,7 +204,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 24 2020 21:46:56 for SzachowyTowerDefence by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Nov 25 2020 20:53:57 for SzachowyTowerDefence by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.18
 </small></address>
