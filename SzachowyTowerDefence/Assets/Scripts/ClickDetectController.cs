@@ -9,6 +9,7 @@ public class ClickDetectController : MonoBehaviour
 {
     private BoardController boardController;
     private FiguresManager figuresManager;
+    [SerializeField] private testOpenCV tablet;
 
     public void Init(BoardController boardController, FiguresManager figuresManager)
     {
@@ -32,6 +33,7 @@ public class ClickDetectController : MonoBehaviour
                 {
                     boardController.OnClickDetected(hit.transform.name);
                     figuresManager.OnClickDetected(hit.transform.name);
+                    tablet.OnClickDetected(hit.transform.name);
                 }
             }
         }

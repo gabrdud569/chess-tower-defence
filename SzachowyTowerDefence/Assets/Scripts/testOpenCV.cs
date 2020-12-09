@@ -23,7 +23,21 @@ public class testOpenCV : MonoBehaviour
     {
         renderer = GetComponent<MeshRenderer>();
         defalultTexture = renderer.material.mainTexture;
-        //Classify();
+    }
+
+    public void OnClickDetected(string name)
+    {
+        if(name == gameObject.name)
+        {
+            if(!run)
+            {
+                Enable();
+            }
+            else
+            {
+                Disable();
+            }
+        }
     }
 
     public void Enable()
@@ -58,6 +72,11 @@ public class testOpenCV : MonoBehaviour
 
     public void Disable()
     {
+        renderer.sharedMaterial.SetFloat("tlx", 0);
+        renderer.sharedMaterial.SetFloat("tly", 0);
+        renderer.sharedMaterial.SetFloat("brx", 0);
+        renderer.sharedMaterial.SetFloat("bry", 0);
+
         run = false;
         renderer.material.mainTexture = defalultTexture;
         webcamTexture.Stop();
@@ -65,6 +84,6 @@ public class testOpenCV : MonoBehaviour
 
     private void OnDisable()
     {
-        webcamTexture.Stop();
+        webcamTexture?.Stop();
     }
 }
