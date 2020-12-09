@@ -42,11 +42,14 @@ public class testOpenCV : MonoBehaviour
 
     public void Enable()
     {
-        webcamTexture = new WebCamTexture();
-        renderer.sharedMaterial.mainTexture = webcamTexture;
-        webcamTexture.Play();
-        renderer.sharedMaterial.SetTexture("MainTex", webcamTexture);
-        run = true;
+        if (run == false)
+        {
+            webcamTexture = new WebCamTexture();
+            renderer.sharedMaterial.mainTexture = webcamTexture;
+            webcamTexture.Play();
+            renderer.sharedMaterial.SetTexture("MainTex", webcamTexture);
+            run = true;
+        }
     }
 
     private void Update()
@@ -60,12 +63,10 @@ public class testOpenCV : MonoBehaviour
             float tlx = 0, tly = 0, brx = 0, bry = 0;
             loadClassifier();
             detectChessPiece(bytes.Length, t.width, t.height, bytes, out tlx, out tly, out brx, out bry);
-            Debug.Log(" FaceCoords :(" + tlx + ", " + tly + ", " + brx + ", " + bry + " ,) ");
             renderer.sharedMaterial.SetFloat("tlx", tlx/webcamTexture.width);
             renderer.sharedMaterial.SetFloat("tly", tly / webcamTexture.height);
             renderer.sharedMaterial.SetFloat("brx",  brx/ webcamTexture.width);
             renderer.sharedMaterial.SetFloat("bry", bry/ webcamTexture.height);
-            Debug.Log(webcamTexture.width + " " + webcamTexture.height);
         }
     }
 

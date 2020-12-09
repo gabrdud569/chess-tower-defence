@@ -33,7 +33,7 @@ public class ClickDetectController : MonoBehaviour
                 {
                     boardController.OnClickDetected(hit.transform.name);
                     figuresManager.OnClickDetected(hit.transform.name);
-                    tablet.OnClickDetected(hit.transform.name);
+                    //tablet.OnClickDetected(hit.transform.name);
                 }
             }
         }

@@ -15,9 +15,6 @@ public class CurrentLevelController : MonoBehaviour
     [SerializeField] private int startPoints;
     [SerializeField] private TMP_Text hpText;
     [SerializeField] private TMP_Text TimeInThisRun;
-    [SerializeField] private Button restartButton;
-    [SerializeField] private Button backToMainMenuButton;
-
 
     public int CurrentHp => currentHp;
     public int StartPoints => startPoints;
@@ -32,8 +29,6 @@ public class CurrentLevelController : MonoBehaviour
         stopwatch.Reset();
         stopwatch.Start();
         TimeInThisRun.gameObject.SetActive(true);
-        restartButton.gameObject.SetActive(false);
-        backToMainMenuButton.gameObject.SetActive(false);
         currentHp = startHp;
         hpText.text = currentHp.ToString();
     }
@@ -72,8 +67,6 @@ public class CurrentLevelController : MonoBehaviour
     {
         stopwatch.Stop();
         Time.timeScale = 0f;
-        restartButton.gameObject.SetActive(true);
-        backToMainMenuButton.gameObject.SetActive(true);
     }
 
     /// <summary>
